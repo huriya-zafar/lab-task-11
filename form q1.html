@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stylish Form</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #1e1e2f;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: radial-gradient(circle, #2c2c54, #1e1e2f);
+    }
+
+    .form-container {
+      background: #282846;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.8em;
+      color: #a29bfe;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #dcdde1;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      color: #fff;
+      background: #353552;
+      outline: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      transform: scale(1.02);
+      box-shadow: 0 4px 8px rgba(162, 155, 254, 0.4);
+    }
+
+    .form-group textarea {
+      resize: none;
+      height: 100px;
+    }
+
+    .submit-btn {
+      display: inline-block;
+      background: linear-gradient(45deg, #6c5ce7, #0984e3);
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      text-align: center;
+      width: 100%;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .submit-btn:hover {
+      background: linear-gradient(45deg, #0984e3, #6c5ce7);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Contact Us</h2>
+    <form action="#">
+      <div class="form-group">
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" name="first_name" placeholder="Enter your first name" required>
+      </div>
+      <div class="form-group">
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name" name="last_name" placeholder="Enter your last name" required>
+      </div>
+      <div class="form-group">
+        <label for="country">Country</label>
+        <select id="country" name="country" required>
+          <option value="" disabled selected>Select your country</option>
+          <option value="pakistan">Pakistan</option>
+          <option value="us">United States</option>
+          <option value="uk">United Kingdom</option>
+          <option value="india">India</option>
+          <option value="canada">Canada</option>
+          <option value="australia">Australia</option>
+          <option value="china">China</option>
+          <option value="germany">Germany</option>
+          <option value="france">France</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something..." required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
